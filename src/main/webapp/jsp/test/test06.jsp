@@ -26,11 +26,14 @@
 			</tr>
 		</thead>
 		<tbody>
-			<%-- <% for(Map<String, Integer> scoreMap : scoreList) { %> --%>
+		<% for(int i = 0; i < goodsList.size(); i++) 
+		{%>
 			<tr>
-				
+				<td><%= i + 1 %></td>
+				<td><%= goodsList.get(i) %></td>
 			</tr>
-			<%-- <% } %> --%>
+		<%} %>
+		</tbody>
 	</table>
 </body>
 </html>
