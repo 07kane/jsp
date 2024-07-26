@@ -37,41 +37,26 @@ public class Test10Controller extends HttpServlet
 		String password = request.getParameter("password");
 		String name = request.getParameter("name");
 		
-		/*
-		 * if(!id.equals(userMap.get("id"))) { out.println("error"); }
-		 * 
-		 * else if(!password.equals(userMap.get("password"))) { out.println("error"); }
-		 * 
-		 * else if(!name.equals(userMap.get("name"))) { out.println("error"); }
-		 * 
-		 * else { out.println("환영합니다!"); }
-		 */
 		
-		Iterator<String> iter = userMap.keySet().iterator();
+		 if(!id.equals(userMap.get("id")))
+		 { 
+			 out.println("error");
+		 }
+		 
+		 else if(!password.equals(userMap.get("password")))
+		 { 
+			 out.println("error"); 
+		 }
+		 
+		 else if(!name.equals(userMap.get("name"))) 
+		 { 
+			 out.println("error"); 
+		 }
 		
-		while(iter.hasNext()) 
-		{
-		    String value = iter.next();
+		 else 
+		 { 
+			 out.println("환영합니다!"); 
+		 }
 
-		    if(!(userMap.get(value) == id)) 
-		    {
-		    	out.println("error");
-		    }
-		    
-		    else if(!(userMap.get(value) == password))
-		    {
-		    	out.println("error");
-		    }
-		    
-		    else if(!(userMap.get(value) == name))
-		    {
-		    	out.println("error");
-		    }
-		    
-		    else 
-		    {
-		    	out.println("Welcome");
-		    }
-		}
 	}
 }
