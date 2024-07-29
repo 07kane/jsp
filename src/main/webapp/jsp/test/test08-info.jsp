@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>test08</title>
+    <title>책 상세 정보</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
 <body>
@@ -39,32 +39,24 @@
             put("publisher", "현대문학");
             put("image", "http://image.kyobobook.co.kr/images/book/xlarge/194/x9788972756194.jpg");
         }});
+		
+        int bookId = Integer.parseInt(request.getParameter("id"));
+        Map<String, Object> selectedBook = null;
+        for(Map<String, Object> book : list)
+        {
+        	if((int)book.get("id") == bookId)
+        	{
+        		selectedBook = book;
+        		break;
+        	}
+        }
+        
     %>
-
-    <div class="d-flex title justify-content-center">
-        <h1>책목록</h1>
-    </div>
-
-    <div class="container d-flex justify-content-center">
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>표지</th>
-                    <th>Title</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% for(Map<String, Object> book : list) 
-                { %>
-                    <tr>
-                        <td><%= book.get("id") %></td>
-                        <td><img width="200px" height="200px" src="<%= book.get("image") %>" alt="사진입니다"></td>
-                        <td><a href="/jsp/test/test08-info.jsp?id=<%= book.get("id") %>"><%= book.get("title") %></a></td>
-                    </tr>
-                <% } %>
-            </tbody>
-        </table>
-    </div>
+	<div class="photo">
+		<img width="200px" height="300px" src="<%= selectedBook.get("image") %>" alt="사진입니다"> 
+		<h1><%= selectedBook.get("title") %></h1>
+   		<h3 class="text-info"><%= selectedBook.get("author") %></h3>
+   		<h4><%= selectedBook.get("publisher") %></h4>
+	</div>
 </body>
 </html>
