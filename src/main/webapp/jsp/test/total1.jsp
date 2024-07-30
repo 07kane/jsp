@@ -52,19 +52,18 @@
     String targetCategory = request.getParameter("category");
     
 %>
-
 	<div id="wrap">
 		<header class="display-3 align-items-center justify-content-center d-flex">
 			<div class="title ">SK broadband IPTV</div>
 		</header>
 		<nav class="bg-danger d-flex align-items-center">
 			<ul class="nav nav-fill w-100 d-flex justify-content-between">
-				<li class="nav-item"><a href="#" class="nav-link text-white">전체</a></li>
-				<li class="nav-item"><a href="http://localhost:8080/jsp/test/total1.jsp?category=%EC%A7%80%EC%83%81%ED%8C%8C#" class="nav-link text-white">지상파</a></li>
-				<li class="nav-item"><a href="http://localhost:8080/jsp/test/total1.jsp?category=%EB%93%9C%EB%9D%BC%EB%A7%88#" class="nav-link text-white">드라마</a></li>
-				<li class="nav-item"><a href="http://localhost:8080/jsp/test/total1.jsp?category=%EC%98%88%EB%8A%A5#" class="nav-link text-white">예능</a></li>
-				<li class="nav-item"><a href="http://localhost:8080/jsp/test/total1.jsp?category=%EC%98%81%ED%99%94" class="nav-link text-white">영화</a></li>
-				<li class="nav-item"><a href="http://localhost:8080/jsp/test/total1.jsp?category=%EC%8A%A4%ED%8F%AC%EC%B8%A0" class="nav-link text-white">스포츠</a></li>
+				<li class="nav-item"><a href="http://localhost:8080/jsp/test/total1.jsp" class="nav-link text-white">전체</a></li>
+				<li class="nav-item"><a href="/jsp/test/total1.jsp?category=%EC%A7%80%EC%83%81%ED%8C%8C#" class="nav-link text-white">지상파</a></li>
+				<li class="nav-item"><a href="/jsp/test/total1.jsp?category=%EB%93%9C%EB%9D%BC%EB%A7%88#" class="nav-link text-white">드라마</a></li>
+				<li class="nav-item"><a href="/jsp/test/total1.jsp?category=%EC%98%88%EB%8A%A5#" class="nav-link text-white">예능</a></li>
+				<li class="nav-item"><a href="/jsp/test/total1.jsp?category=%EC%98%81%ED%99%94" class="nav-link text-white">영화</a></li>
+				<li class="nav-item"><a href="/jsp/test/total1.jsp?category=%EC%8A%A4%ED%8F%AC%EC%B8%A0" class="nav-link text-white">스포츠</a></li>
 			</ul>
 		</nav>
 		<section class="contents">
@@ -80,17 +79,15 @@
 				<tbody>
 				<% for(Map<String, String> channer : list) 
 				{
-					if(targetCategory.equals(channer.get("category")))
+					if(targetCategory == null || targetCategory.equals(channer.get("category")))
 					{
-						
-					
 				%>
 					<tr>
 						<td> <%= channer.get("ch") %> </td>		
 						<td> <%= channer.get("name") %> </td>	
 						<td> <%= channer.get("category") %> </td>			
 					</tr>	
-				<%} %>	
+				  <%} %>	
 			   <%}%>
 				</tbody>
 			</table>
