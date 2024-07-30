@@ -1,1 +1,55 @@
 @charset "UTF-8";
+
+#wrap
+{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+header
+{
+	height: 100px;
+}
+
+header > .logo
+{
+	width: 300px;
+	color: green;
+}
+
+header > .logo > .logo-text
+{
+	color: green;
+}
+
+header > .search
+{
+	width: 600px;
+}
+
+.navigator
+{
+	height: 50px;
+}
+
+.contents
+{
+	height: 600px;
+}
+
+.contents > .people
+{
+	width: 1200px;
+	height: 200px;
+}
+
+.contents > .main_contents
+{
+	width: 1200px;
+	height: 400px;
+}
+
+footer
+{
+	height: 50px;
+}
