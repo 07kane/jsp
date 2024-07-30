@@ -90,6 +90,7 @@
  musicList.add(musicInfo);
  
  int targetId = Integer.parseInt(request.getParameter("id"));
+ String title = request.getParameter("title");
 %>
 	<div id="wrap">
 		<header class="d-flex">
