@@ -103,14 +103,16 @@
 		 	<div class="logo d-flex justify-content-center align-items-center">
 		 		<b class="logo-text display-4">Melong</b>
 		 	</div>
-		 	<div class="search d-flex justify-content-start align-items-end">
-		 		<div class="input-group mb-3">
-  				<input type="text" class="form-control" aria-describedby="button-addon2">
-  				<div class="input-group-append">
-    				<button class="btn btn-outline-secondary bg-info text-white" type="button" id="button-addon2">Button</button>
-  				</div>
-			</div>
-		 	</div>
+		 	<form method="get" action="/jsp/test/total2.jsp">	 		
+			 	<div class="search d-flex justify-content-start align-items-end">
+			  		<div class="input-group mb-3">
+		  				<input type="text" class="form-control" aria-describedby="button-addon2">
+		  				<div class="input-group-append">
+		    				<button class="btn btn-outline-secondary bg-info text-white" type="button" id="button-addon2">Button</button>
+		  				</div>
+					</div>
+		 		</div>
+		 	</form>
 		</header>
 		
 		<nav class="navigator d-flex align-items-center">
