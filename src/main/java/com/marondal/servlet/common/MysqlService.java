@@ -59,8 +59,8 @@ public class MysqlService
 	{
 		try
 		{
-			Statement statement = connection.createStatement(); //Statement는 MySQL과 연결해주는 객체
-			ResultSet resultSet = statement.executeQuery(query); //ResultSet는 쿼리를 실행한다
+			Statement statement = connection.createStatement(); //connection는 MySQL과 연결해주는 객체이다
+			ResultSet resultSet = statement.executeQuery(query); //statement는 쿼리를 실행한다
 			
 			List<Map<String, Object>> resultList = new ArrayList<>();
 			

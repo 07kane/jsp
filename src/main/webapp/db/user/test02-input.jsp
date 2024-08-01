@@ -9,7 +9,7 @@
 <body>
 	<form method="get" action="/db/user/insert">
 			<label>사이트명 : </label><input type="text" name="name"><br>
-			<label>사이트 주소 : </label><input type="text" name="birthday"><br>
+			<label>사이트 주소 : </label><input type="text" name=""><br>
 			
 			<button type="submit">추가</button>
 	</form>

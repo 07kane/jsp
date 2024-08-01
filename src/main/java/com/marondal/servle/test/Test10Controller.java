@@ -57,6 +57,5 @@ public class Test10Controller extends HttpServlet
 		 { 
 			 out.println("환영합니다!"); 
 		 }
-
 	}
 }
